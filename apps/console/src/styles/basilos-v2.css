@@ -1,0 +1,47 @@
+/* Partial port of the verified Basilos V2 composition; host data and editor stay controlled. */
+.chat-app .conversation { container: chat-panel / inline-size; }
+.chat-app .harness-composer > [data-slot=input-group] {
+  padding: 6px; border-radius: 16px; border: 1px solid var(--border); background: var(--card);
+  box-shadow: 0 3px 18px #0000000a; transition: border-color .15s, box-shadow .15s;
+}
+.chat-app .harness-composer > [data-slot=input-group]:focus-within { border-color: var(--ring); box-shadow: 0 4px 22px #0000000f; }
+.chat-app .harness-composer .harness-textarea {
+  border: 0; border-radius: 0; background: transparent; outline: none;
+  min-height: 82px; max-height: 220px; font-size: 15px; line-height: 1.8; padding: 10px 10px 8px;
+}
+.chat-app .harness-composer .harness-footer { padding: 4px 6px 6px; }
+.chat-app .harness-composer .harness-context { padding: 8px 8px 0; }
+.harness-context .composer-context-row { width: 100%; margin-bottom: 4px; padding-bottom: 8px; }
+.chat-app .harness-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-width: 0; }
+.chat-app .harness-tools, .chat-app .harness-actions { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.chat-app .harness-actions { flex-shrink: 0; }
+.chat-app .harness-composer .model-button { min-height: 36px; max-width: 200px; padding: 5px 9px; border-radius: 8px; font-size: 12px; background: transparent; }
+.chat-app .harness-composer .scope-button { min-height: 36px; padding: 5px 7px; border-radius: 8px; font-size: 12px; }
+.chat-app .harness-composer .harness-send { width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; }
+.chat-app .harness-composer .harness-send svg { width: 16px; height: 16px; }
+.chat-app .context-chip { border-radius: 8px; background: var(--muted); border-color: transparent; }
+.chat-app .chat-access-notice { margin-bottom: 12px; border-radius: 12px; }
+.chat-app .message { font-size: 15px; line-height: 1.8; }
+.chat-app .message.user { max-width: 88%; border-radius: 16px; padding: 12px 16px; background: var(--muted); }
+.chat-app .message.assistant { padding-bottom: 0; margin-bottom: 32px; }
+.chat-app .message-header { gap: 8px; margin-bottom: 12px; }
+.chat-app .markdown p { line-height: 1.8; }
+.chat-app .markdown th, .chat-app .markdown td { padding: 10px 12px; line-height: 1.65; }
+.chat-app .answer-actions { gap: 4px; margin-top: 10px; flex-wrap: wrap; }
+.chat-app .answer-actions [data-slot=button] { border-radius: 8px; }
+.chat-app .jump-latest { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding-inline: 12px; border-radius: 999px; background: var(--popover); }
+@container chat-panel (max-width: 40rem) {
+  .chat-app .harness-composer .harness-textarea { min-height: 72px; max-height: 160px; font-size: 16px; }
+  .chat-app .harness-toolbar { gap: 5px; }
+  .chat-app .harness-tools { gap: 1px; }
+  .chat-app .harness-actions { gap: 3px; }
+  .chat-app .harness-composer .context-button { width: 32px; min-width: 32px; padding-inline: 0; }
+  .chat-app .harness-composer .model-button { min-height: 44px; max-width: 113px; padding-inline: 7px; }
+  .chat-app .harness-composer .scope-button { width: 30px; min-width: 30px; min-height: 44px; padding: 0; }
+  .chat-app .harness-composer .scope-button > span, .chat-app .harness-composer .scope-button > svg:last-child { display: none; }
+  .chat-app .harness-composer .scope-button > svg:first-child { display: block; }
+  .chat-app .harness-composer .harness-send { width: 44px; height: 44px; }
+  .chat-app .message.user { max-width: 94%; }
+}
+@media(pointer:coarse) { .chat-app .harness-composer [data-slot=button], .chat-app .answer-actions [data-slot=button], .chat-app .jump-latest { min-height: 44px; } }
+@media(prefers-reduced-motion:reduce) { .chat-app .harness-composer > [data-slot=input-group] { transition: none; } }

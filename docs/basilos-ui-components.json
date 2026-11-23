@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "integrationDate": "2026-10-28",
+  "method": "Official local CLI 0.2.2 and documented source synchronization; no cloud project registration",
+  "rulesRelease": "local-core-a9e447f2844c007f12ea",
+  "sourceRepositoryBaseCommit": "52e0223de4cd5ed3c60cf0a172f156fe97dffc1c",
+  "sourceState": "Local maintained source working tree; file digests identify the exact snapshot, not a published runtime release",
+  "runtimePackage": "@orion/harness-ui",
+  "newRuntimeDependencies": [],
+  "recoverableAdaptedBaseline": "Git tag phase2-basilos-ui-20261028 contains the adopted source and host adaptations",
+  "components": [
+    {
+      "name": "Card",
+      "source": "components/src/ui/card.tsx",
+      "sourceSha256": "eff089eb965c52f42442763f158c33d06ba9ac477a566ae6a6355ded0e308831",
+      "target": "packages/harness-ui/src/ui/card.tsx",
+      "adoptedSha256": "2039c46a933222e1875b285ecceccc2d06e18841856b730f8c514eccf0672537",
+      "adaptation": "Normalized line endings; source utility imports match the local package"
+    },
+    {
+      "name": "Alert",
+      "source": "components/src/ui/alert.tsx",
+      "sourceSha256": "92af12b35924c39087eaa9b4ac10c264a894eb85da431e77bb93312328fce92e",
+      "target": "packages/harness-ui/src/ui/alert.tsx",
+      "adoptedSha256": "38b6cf32a3815b73f82a001a3641b748ad8a0d64292876778212db8510219ff9",
+      "adaptation": "Normalized line endings; source utility imports match the local package"
+    },
+    {
+      "name": "NativeSelect",
+      "source": "components/src/ui/native-select.tsx",
+      "sourceSha256": "a18e44cfdbfe5e6a7d5534d15b186042cd3da92563884f525147028506d336c7",
+      "target": "packages/harness-ui/src/ui/native-select.tsx",
+      "adoptedSha256": "ea7b37ac4fb1836c3c7d94d516383757d5e0f4d79e5d231e48d0f8ec3b791ee6",
+      "adaptation": "Normalized line endings; source utility imports match the local package"
+    },
+    {
+      "name": "Table",
+      "source": "components/src/ui/table.tsx",
+      "sourceSha256": "e8a93367101250c709cf8ae41a51138bb8a96309a41e27598b583d329b7b8324",
+      "target": "packages/harness-ui/src/ui/table.tsx",
+      "adoptedSha256": "91ea6f01831e6c53a66a9a683522a9a3741538d6bd280f53138d3b6f1b48b56d",
+      "adaptation": "Added containerProps to the scrolling wrapper for keyboard and accessible naming; normalized line endings"
+    },
+    {
+      "name": "Skeleton",
+      "source": "components/src/ui/skeleton.tsx",
+      "sourceSha256": "0cf390803d9e2c1ed50bb5c59315914b979f39bd031c4c712725622ec85f1f62",
+      "target": "packages/harness-ui/src/ui/skeleton.tsx",
+      "adoptedSha256": "ccf810eba0bc1b046360428edd7bcc276e9dae025ca6c06dec0476f6b2d49857",
+      "adaptation": "Normalized line endings; source utility imports match the local package"
+    },
+    {
+      "name": "Empty",
+      "source": "components/src/ui/empty.tsx",
+      "sourceSha256": "f9c86d34ff01614aff3759480c10ffa5bff030c2d65c3da94e5f8a0ebe270735",
+      "target": "packages/harness-ui/src/ui/empty.tsx",
+      "adoptedSha256": "19fd400e59740e3e6927459fdf8df989506f804e0b1eabd9b0356d473ed4dfab",
+      "adaptation": "Normalized line endings; source utility imports match the local package"
+    },
+    {
+      "name": "Separator",
+      "source": "components/src/ui/separator.tsx",
+      "sourceSha256": "8bd03ab316de03491270ba13df51df7e579803a96c9b9c365868a6f59f3b0ccf",
+      "target": "packages/harness-ui/src/ui/separator.tsx",
+      "adoptedSha256": "8bd03ab316de03491270ba13df51df7e579803a96c9b9c365868a6f59f3b0ccf",
+      "adaptation": "Normalized line endings; source utility imports match the local package"
+    },
+    {
+      "name": "Progress",
+      "source": "components/src/ui/progress.tsx",
+      "sourceSha256": "627d36b2a67c09cf1bfa4de2ef362ddc67146eaa66c155b23fb876471c668166",
+      "target": "packages/harness-ui/src/ui/progress.tsx",
+      "adoptedSha256": "56fde4875fb73cd8f5f6e41d917520daf151ec7d16b80115b06958472f244c8a",
+      "adaptation": "Normalized line endings; source utility imports match the local package"
+    },
+    {
+      "name": "Kbd",
+      "source": "components/src/ui/kbd.tsx",
+      "sourceSha256": "d3e2243b68e35cc76ded7fd38ee9ad59bc4a073fa839c5212606fdc5b092434e",
+      "target": "packages/harness-ui/src/ui/kbd.tsx",
+      "adoptedSha256": "f7b4885b3a9a91cfa06a56d31dfe990552a6b1ddce48d536cd4bab7d45eb0c7b",
+      "adaptation": "Normalized line endings; source utility imports match the local package"
+    }
+  ],
+  "theme": {
+    "source": "components/src/styles/shadcn.css",
+    "target": "packages/ui/src/styles/basilos.css",
+    "strategy": "Map selected neutral surface tokens; preserve host fonts, accessible status colors, theme storage and events; do not import the documentation reset or animation dependencies"
+  },
+  "retained": [
+    "Existing PromptInput source with controlled-draft behavior",
+    "Existing Conversation and Message host adaptations",
+    "Existing Orion Button, Badge, Dialog, Popover, Input and Textarea wrappers"
+  ]
+}

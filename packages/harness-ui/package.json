@@ -1,0 +1,26 @@
+{
+  "name": "@orion/harness-ui",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    "./ai/prompt-input": "./src/components/ai-elements/prompt-input.tsx",
+    "./ui/*": "./src/ui/*.tsx"
+  },
+  "peerDependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "dependencies": {
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "cmdk": "1.1.1",
+    "lucide-react": "1.31.0",
+    "nanoid": "3.3.20",
+    "radix-ui": "1.6.7",
+    "react-remove-scroll": "2.7.2",
+    "recharts": "3.10.1",
+    "tailwind-merge": "3.6.0"
+  }
+}

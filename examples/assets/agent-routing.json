@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-01-01T00:00:00Z",
+  "version": "example",
+  "limitations": ["Empty public example; no production results included."],
+  "routing": {"n":0,"correct":0,"complex_n":0,"false_local":0,"local_n":0,"cloud_n":0,"errors":0,"p50_ms":null,"p95_ms":null,"records":[]},
+  "comparison": {"runs":[],"summaries":[]},
+  "acceptance": []
+}

@@ -1,0 +1,62 @@
+/* The prompt owns one focus surface; ordinary form textareas retain their own ring. */
+.prompt-composer { border: 1px solid var(--input); border-radius: 20px; background: var(--background); padding: 18px 18px 12px; box-shadow: 0 3px 12px oklch(0 0 0 / .025); min-width: 0; }
+.prompt-composer:focus-within { border-color: var(--ring); box-shadow: 0 0 0 3px var(--muted); }
+.prompt-composer .prompt-textarea, .prompt-composer .prompt-textarea:focus-visible { display: block; resize: none; field-sizing: fixed; width: 100%; min-height: 72px; max-height: 200px; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; outline: none; font-size: 15px; line-height: 1.8; overflow-y: auto; scrollbar-width: thin; }
+.prompt-composer .prompt-textarea::placeholder { color: var(--muted-foreground); }
+.prompt-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; }
+.prompt-controls { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.prompt-submit { display: flex; flex-shrink: 0; }
+.prompt-composer .model-button, .prompt-composer .scope-button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 34px; height: 34px; padding: 0 10px; border: 1px solid transparent; border-radius: 9px; box-shadow: none; background: var(--muted); font-size: 13px; font-weight: 500; color: var(--foreground); white-space: nowrap; }
+.prompt-composer .scope-button { background: transparent; color: var(--muted-foreground); font-weight: 400; }
+.prompt-composer .scope-button:hover, .prompt-composer .scope-button[aria-expanded=true] { background: var(--muted); color: var(--foreground); }
+.prompt-composer .model-button { max-width: 240px; }
+.prompt-composer .model-button svg, .prompt-composer .scope-button svg { width: 14px; height: 14px; }
+.prompt-composer .model-button svg:last-child, .prompt-composer .scope-button svg:last-child { width: 12px; height: 12px; }
+.prompt-composer #send, .prompt-composer #stop { display: inline-flex; align-items: center; justify-content: center; width: 36px; min-width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: var(--primary); color: var(--primary-foreground); }
+.prompt-composer #send svg { width: 18px; height: 18px; }
+.prompt-composer #stop svg { width: 12px; height: 12px; fill: currentColor; }
+.prompt-composer #send:disabled { background: var(--muted); color: var(--muted-foreground); opacity: 1; }
+.prompt-caption { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin: 10px 4px 0; color: var(--muted-foreground); font-size: 11px; line-height: 1.8; }
+.prompt-context { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.prompt-context>button { display: inline-flex; align-items: center; gap: 4px; padding: 0; border-radius: 4px; white-space: nowrap; flex-shrink: 0; color: inherit; font-size: 11px; }
+.prompt-context>button:hover { color: var(--foreground); }
+.prompt-context>button svg { width: 12px; height: 12px; align-self: center; }
+.prompt-context-divider { align-self: center; width: 1px; height: 10px; background: var(--border); flex-shrink: 0; }
+.prompt-shortcut { display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0; white-space: nowrap; font-size: 11px; }
+.prompt-shortcut kbd { font-size: 11px; }
+.prompt-shortcut>span { margin-inline: 2px; }
+.composer-activity { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 16px; min-height: 26px; margin: 0 4px 8px; }
+.composer-activity .live-status { font-size: 12px; }
+.composer-activity .request-progress { gap: 12px; }
+.scope-popover { width: 340px; max-width: calc(100vw - 24px); border: 1px solid var(--border); border-radius: 12px; padding: 8px; box-shadow: var(--shadow); background: var(--popover); }
+.scope-popover legend { padding: 8px 10px; color: var(--muted-foreground); font-size: 12px; }
+.scope-option { position: relative; display: flex; align-items: flex-start; gap: 10px; padding: 12px 10px; border-radius: 8px; cursor: pointer; }
+.scope-option:has(input:checked), .scope-option:hover { background: var(--muted); }
+.scope-option:has(input:focus-visible) { outline: 2px solid var(--ring); outline-offset: -2px; }
+.scope-option input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.scope-option>svg { margin-top: 3px; width: 16px; height: 16px; color: var(--muted-foreground); }
+.scope-option>svg:last-child { margin-left: auto; width: 14px; color: var(--foreground); flex-shrink: 0; }
+.scope-option>span { flex: 1; min-width: 0; }
+.scope-option strong { font-size: 13px; font-weight: 500; }
+.scope-option small { display: block; margin-top: 4px; font-size: 12px; line-height: 1.7; color: var(--muted-foreground); }
+@media (max-width: 1200px) { .prompt-shortcut { display: none; } }
+@media (max-width: 760px) {
+  .prompt-composer { padding: 16px 14px 12px; border-radius: 18px; }
+  .prompt-composer .prompt-textarea, .prompt-composer .prompt-textarea:focus-visible { font-size: 16px; min-height: 76px; }
+  .prompt-toolbar { gap: 8px; margin-top: 10px; }
+  .prompt-controls { gap: 2px; }
+  .prompt-composer .model-button, .prompt-composer .scope-button { min-height: 44px; height: 44px; padding-inline: 8px; gap: 5px; font-size: 12px; }
+  .prompt-composer .model-button { max-width: 150px; }
+  .prompt-composer .scope-button { max-width: 132px; }
+  .prompt-composer .scope-button svg:first-child { display: none; }
+  .prompt-composer #send, .prompt-composer #stop { width: 44px; min-width: 44px; height: 44px; }
+  .prompt-caption { margin-inline: 3px; margin-top: 9px; }
+  .prompt-context { gap: 6px; }
+  .prompt-context { align-items: center; }
+  .prompt-context-divider { display: none; }
+  .prompt-context>button { min-width: 72px; min-height: 44px; justify-content: center; }
+  .scope-option { min-height: 56px; }
+  .composer-activity .request-progress { gap: 10px; }
+}
+@media (forced-colors: active) { .prompt-composer:focus-within { outline: 2px solid Highlight; } }
+

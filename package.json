@@ -1,0 +1,42 @@
+{
+  "name": "orion-lab",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.19"
+  },
+  "scripts": {
+    "dev": "npm run dev --workspace @orion/console",
+    "preview": "npm run preview --workspace @orion/console",
+    "build": "npm run build:console && npm run build:agent",
+    "typecheck": "npm run typecheck --workspace @orion/console && npm run typecheck --workspace @orion/agent-server",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "test:browser": "node scripts/browser-regression.mjs",
+    "check:source": "node scripts/check-source.mjs",
+    "package:release": "node scripts/package-release.mjs",
+    "build:console": "npm run build --workspace @orion/console",
+    "build:agent": "node scripts/build-agent.mjs",
+    "dev:agent": "npm run dev --workspace @orion/agent-server",
+    "package:agent": "node scripts/package-agent.mjs",
+    "test:projects": "node scripts/project-browser.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@types/node": "22.20.1",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.1.2",
+    "axe-core": "4.14.0",
+    "esbuild": "0.28.2",
+    "playwright": "1.62.1",
+    "tailwindcss": "4.3.3",
+    "typescript": "6.0.3",
+    "vite": "8.3.4"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

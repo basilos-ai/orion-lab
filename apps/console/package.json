@@ -1,0 +1,25 @@
+{
+  "name": "@orion/console",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@orion/contracts": "*",
+    "@orion/harness-ui": "*",
+    "@orion/ui": "*",
+    "lucide-react": "1.31.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-markdown": "10.1.0",
+    "recharts": "3.10.1",
+    "remark-gfm": "4.0.1",
+    "use-stick-to-bottom": "1.1.6"
+  },
+  "license": "MIT"
+}

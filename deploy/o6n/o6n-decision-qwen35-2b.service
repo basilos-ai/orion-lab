@@ -1,0 +1,16 @@
+[Unit]
+Description=Orion Auto decision engine Qwen3.5-2B on Houmo
+Conflicts=o6n-decision-qwen35-4b.service
+
+[Service]
+Type=simple
+Environment=HOUMO_SDK_PATH=/usr/local/houmo-sdk
+Environment=LD_LIBRARY_PATH=%h/houmo-runtime/lib:/usr/local/houmo-sdk/hal/lib
+Environment=LLAMA_CHECKPOINT_STORAGE=0
+Environment=OMP_NUM_THREADS=8
+ExecStartPre=/usr/bin/test -c /dev/xh2a_ipu0
+ExecStart=%h/houmo-runtime/bin/llama-server -m %h/orion-models/qwen3.5-2b-houmo.gguf --host 127.0.0.1 --port 17804 --alias qwen35-2b-houmo -t 8 -tb 8 -c 4096 -b 512 -ub 256 --parallel 1 --cache-ram 0 --no-cache-prompt --reasoning off --reasoning-format deepseek --jinja --offline
+CPUAffinity=0 1 6 7 8 9 10 11
+MemoryMax=6G
+Restart=no
+TimeoutStopSec=30

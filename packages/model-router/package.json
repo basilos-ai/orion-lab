@@ -1,0 +1,13 @@
+{
+  "name": "@orion/model-router",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@orion/contracts": "*"
+  },
+  "license": "MIT"
+}

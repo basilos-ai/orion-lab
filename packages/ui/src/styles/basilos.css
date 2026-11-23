@@ -1,0 +1,21 @@
+/* Basilos source token mapping. Preserve Orion storage, fonts and status colors. */
+:root {
+  --foreground: oklch(.145 0 0);
+  --card: oklch(1 0 0);
+  --secondary: oklch(.97 0 0);
+  --muted: oklch(.97 0 0);
+  --border: oklch(.922 0 0);
+  --sidebar: oklch(.985 0 0);
+  --radius: .625rem;
+}
+:root[data-theme=dark] {
+  --foreground: oklch(.985 0 0);
+  --card: oklch(.205 0 0);
+  --popover: oklch(.205 0 0);
+  --primary: oklch(.922 0 0);
+  --primary-foreground: oklch(.205 0 0);
+  --secondary: oklch(.269 0 0);
+  --muted: oklch(.269 0 0);
+  --border: oklch(1 0 0 / .1);
+  --sidebar: oklch(.205 0 0);
+}

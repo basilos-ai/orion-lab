@@ -1,0 +1,24 @@
+[Unit]
+Description=Experimental GLiNER2.5 multilingual CPU classifier (not Auto)
+After=network.target
+
+[Service]
+WorkingDirectory=%h/gliner25-multi-decide
+ExecStart=%h/gliner25-multi-decide/.venv/bin/python -u %h/gliner25-multi-decide/app.py
+Environment=GLINER_ROOT=%h/gliner25-multi-decide
+Environment=GLINER_PORT=17786
+Environment=OMP_NUM_THREADS=8
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=TOKENIZERS_PARALLELISM=false
+Environment=HF_HUB_OFFLINE=1
+Environment=TRANSFORMERS_OFFLINE=1
+Environment=USE_TF=0
+CPUAffinity=0 1 6 7 8 9 10 11
+MemoryMax=4G
+TasksMax=128
+NoNewPrivileges=true
+Restart=no
+TimeoutStopSec=30
+
+[Install]
+WantedBy=default.target

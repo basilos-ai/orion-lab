@@ -1,0 +1,7 @@
+{
+  "controlled_workspace": "YOUR_WORKSPACE_ID",
+  "controlled_gateway_key": "REPLACE_IN_PRIVATE_FILE_ONLY",
+  "webhook_token": "REPLACE_IN_PRIVATE_FILE_ONLY",
+  "trusted_client_ips": ["127.0.0.1"],
+  "cloud_daily_limit": 100
+}

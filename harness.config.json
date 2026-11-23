@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "gates": {
+    "unit": {
+      "script": "test",
+      "scope": "JavaScript行为、真实项目HTTP接口与Pi SDK回归；Python桥接单测单独执行，模型性能证据另存。"
+    },
+    "build": {
+      "script": "build",
+      "scope": "React多入口和独立Pi Agent Node产物；私有内容边界另跑check:source。"
+    },
+    "typecheck": {
+      "script": "typecheck",
+      "scope": "React、共享UI/契约、Agent服务与运行时包的TypeScript检查。"
+    }
+  }
+}

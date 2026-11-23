@@ -1,0 +1,394 @@
+{
+  "current": "React 19 + Vite host using published Basilos UI components, Radix UI, Tailwind CSS 4 and Recharts; V2 shell, typography, geometry and appearance adapted to existing resource/chat contracts.",
+  "design_reference": "User-supplied Web UI Harness workflow and UX guidance",
+  "historical_adoption": {
+    "source": "User-supplied Web UI Harness",
+    "components": [
+      {
+        "component": "button",
+        "source": "components/src/ui/button.tsx",
+        "sha256": "bf928df50ea68e8a191f7f3d9e610661e9d6305bf55fa969525cb724ec432fb2",
+        "adaptation": "Only local cn import path; host styles and API remain separate."
+      },
+      {
+        "component": "input",
+        "source": "components/src/ui/input.tsx",
+        "sha256": "726df704538553cd079686ef759fbf904aa2472541d6c889bb0289c24fc20628",
+        "adaptation": "Only local cn import path; host styles and API remain separate."
+      },
+      {
+        "component": "textarea",
+        "source": "components/src/ui/textarea.tsx",
+        "sha256": "27abd6a92c0c0921e5a036ec949f6072a7c55c8226d058115c56d47d5fd8eca3",
+        "adaptation": "Only local cn import path; host styles and API remain separate."
+      },
+      {
+        "component": "dialog",
+        "source": "components/src/ui/dialog.tsx",
+        "sha256": "e637537c4c902287f62cd0fd730186e909f6506dd526eb725cc1c1a8cb665ea2",
+        "adaptation": "Only local cn import path; host styles and API remain separate."
+      },
+      {
+        "component": "badge",
+        "source": "components/src/ui/badge.tsx",
+        "sha256": "a9e9fe2bb59056463cde5de059743b811bdf0a89f8b6f93dd529f14ebb17146c",
+        "adaptation": "Only local cn import path; host styles and API remain separate."
+      },
+      {
+        "component": "table",
+        "source": "components/src/ui/table.tsx",
+        "sha256": "e8a93367101250c709cf8ae41a51138bb8a96309a41e27598b583d329b7b8324",
+        "adaptation": "Only local cn import path; host styles and API remain separate."
+      },
+      {
+        "component": "popover",
+        "source": "components/src/ui/popover.tsx",
+        "sha256": "123445e4ceab1e958029066e65f009675d83e81d2d3f72ccd50f457a3d6e65c7",
+        "adaptation": "Only local cn import path; host styles and API remain separate."
+      },
+      {
+        "component": "tooltip",
+        "source": "components/src/ui/tooltip.tsx",
+        "sha256": "eee099a46444c713c1f6a190fe3cd72a8add99e13be51755ce512722e39e5e37",
+        "adaptation": "Only local cn import path; host styles and API remain separate."
+      }
+    ],
+    "publication_note": "Company source ownership and redistribution terms must be confirmed before public release; no remote publication performed."
+  },
+  "publication_note": "Local Harness source redistribution is now explicitly authorized under MIT. Dependency license texts remain independently retained in THIRD_PARTY_NOTICES.md.",
+  "prompt_input": {
+    "component": "Harness PromptInput / Body / Header / Footer / Tools / Submit / Textarea",
+    "package": "@orion/harness-ui",
+    "license": "MIT",
+    "authorization": "Explicit user confirmation on 2026-10-20 to include the supplied PromptInput and required UI source under MIT.",
+    "files": [
+      {
+        "source": "components/src/components/ai-elements/prompt-input.tsx",
+        "target": "packages/harness-ui/src/components/ai-elements/prompt-input.tsx",
+        "source_sha256": "82dc4ff96a3b84799aa87fe426dab6cc7e22d56541eccfba610628cd8055ae64",
+        "adopted_sha256": "7307403ef7ad2ae4ed69c260923e7cc94f9d3f42053cf7e473318fa8288d83d8"
+      },
+      {
+        "source": "components/src/ui/input-group.tsx",
+        "target": "packages/harness-ui/src/ui/input-group.tsx",
+        "source_sha256": "d93441f9722210e62d5a941e95c5f3f059f339af3b8240a8d8aff714075b2555",
+        "adopted_sha256": "d93441f9722210e62d5a941e95c5f3f059f339af3b8240a8d8aff714075b2555"
+      },
+      {
+        "source": "components/src/ui/button.tsx",
+        "target": "packages/harness-ui/src/ui/button.tsx",
+        "source_sha256": "bf928df50ea68e8a191f7f3d9e610661e9d6305bf55fa969525cb724ec432fb2",
+        "adopted_sha256": "782f5f4d0991bcd90568a6e9945c2f5cdefb9bd1602d7e0cf918c19532a379f2"
+      },
+      {
+        "source": "components/src/ui/textarea.tsx",
+        "target": "packages/harness-ui/src/ui/textarea.tsx",
+        "source_sha256": "27abd6a92c0c0921e5a036ec949f6072a7c55c8226d058115c56d47d5fd8eca3",
+        "adopted_sha256": "27abd6a92c0c0921e5a036ec949f6072a7c55c8226d058115c56d47d5fd8eca3"
+      },
+      {
+        "source": "components/src/ui/input.tsx",
+        "target": "packages/harness-ui/src/ui/input.tsx",
+        "source_sha256": "726df704538553cd079686ef759fbf904aa2472541d6c889bb0289c24fc20628",
+        "adopted_sha256": "726df704538553cd079686ef759fbf904aa2472541d6c889bb0289c24fc20628"
+      },
+      {
+        "source": "components/src/ui/command.tsx",
+        "target": "packages/harness-ui/src/ui/command.tsx",
+        "source_sha256": "809637adc37c1e44d2b3df054ad56fd18806741b6bfd67793731af8480c41477",
+        "adopted_sha256": "70bd09e24565b4521f180ade4dabba4fe82b239310d929da38e599861ccb01ce"
+      },
+      {
+        "source": "components/src/ui/dialog.tsx",
+        "target": "packages/harness-ui/src/ui/dialog.tsx",
+        "source_sha256": "e637537c4c902287f62cd0fd730186e909f6506dd526eb725cc1c1a8cb665ea2",
+        "adopted_sha256": "f0e29024bc638a210321f50c04380b96fd2b4957848cefdce983e18f235e55ab"
+      },
+      {
+        "source": "components/src/ui/dropdown-menu.tsx",
+        "target": "packages/harness-ui/src/ui/dropdown-menu.tsx",
+        "source_sha256": "c01c568abccec8cbbcdcd78df3ba3d73f38cfb193ff1f88f0d520cdd5b26c059",
+        "adopted_sha256": "656beb02b97f669934aaa46bb8bb600c7afaa2b42a6b565116a5fe59d6d6b374"
+      },
+      {
+        "source": "components/src/ui/hover-card.tsx",
+        "target": "packages/harness-ui/src/ui/hover-card.tsx",
+        "source_sha256": "6e2148f8936bfc7feff0118699de08451e7ff3066e232ead763fe1c76d4ce963",
+        "adopted_sha256": "f8e4367f4c0a249b64954d1170342eb487d6e4b4efe977021f7e6b8db4384cd9"
+      },
+      {
+        "source": "components/src/ui/select.tsx",
+        "target": "packages/harness-ui/src/ui/select.tsx",
+        "source_sha256": "f78394e4c8aed08fa2172233bc521dda70ab6e62b0cdba7637b18d53c706db20",
+        "adopted_sha256": "f78394e4c8aed08fa2172233bc521dda70ab6e62b0cdba7637b18d53c706db20"
+      },
+      {
+        "source": "components/src/ui/spinner.tsx",
+        "target": "packages/harness-ui/src/ui/spinner.tsx",
+        "source_sha256": "5162efdd2da313f4d7a1a009d995309a8730a9b39208d281746cb42179c4a905",
+        "adopted_sha256": "5162efdd2da313f4d7a1a009d995309a8730a9b39208d281746cb42179c4a905"
+      },
+      {
+        "source": "components/src/ui/tooltip.tsx",
+        "target": "packages/harness-ui/src/ui/tooltip.tsx",
+        "source_sha256": "eee099a46444c713c1f6a190fe3cd72a8add99e13be51755ce512722e39e5e37",
+        "adopted_sha256": "eee099a46444c713c1f6a190fe3cd72a8add99e13be51755ce512722e39e5e37"
+      },
+      {
+        "source": "components/src/lib/utils.ts",
+        "target": "packages/harness-ui/src/lib/utils.ts",
+        "source_sha256": "4b705c7d7e5c7a2dd73d26ad35e9c0583d3d3655e2a5be1e67cea21458f29c01",
+        "adopted_sha256": "4b705c7d7e5c7a2dd73d26ad35e9c0583d3d3655e2a5be1e67cea21458f29c01"
+      }
+    ],
+    "adaptations": [
+      "Relative import relocation and normalized line endings.",
+      "Type-only ChatStatus/FileUIPart/SourceDocumentUIPart use local structural UI interfaces; no unused model SDK dependency.",
+      "Optional clearOnSubmit (defaults true, host uses false) preserves controlled drafts until admission; behavior otherwise retained."
+    ],
+    "host_composition": "Direct component imports. InputGroup owns the border and focus surface. Native draft/ref, IME supplemental 229 guard, max 16000 characters; unsupported attachments rejected with maxFiles 0; no screenshot/speech controls enabled.",
+    "previous": "Ant Design X Sender was replaced at user request; its three direct dependencies have been removed."
+  },
+  "basilos_phase2": {
+    "manifest": "docs/basilos-ui-components.json",
+    "config": "basilos.config.json",
+    "lock": "basilos.lock.json",
+    "runtime": "Local vendored source; no sibling repository imports at runtime",
+    "baseline": "phase2-basilos-ui-20261028"
+  },
+  "basilos_v2_adaptation": {
+    "date": "2026-10-28",
+    "sourceRelease": "0.4.0-agent-materials.1",
+    "resource": "templates/admin-dashboard-v2",
+    "strategy": "composition-and-partial-port",
+    "sourceEvidence": "docs/basilos-ui-v2-source-verification-2026-10-28.json",
+    "adaptedBaseline": "docs/basilos-v2-adapted-baseline-2026-10-28.json",
+    "adopted": [
+      "Card(sm)/CardHeader/CardContent metric composition",
+      "container-aware overview layout",
+      "loading versus retained-content fetching",
+      "neutral chat sender surface and toolbar",
+      "message typography and actions"
+    ],
+    "hostOwned": [
+      "/api/resources and sampling semantics",
+      "useChat, session auth, draft and stream handling",
+      "PromptInput with clearOnSubmit=false",
+      "use-stick-to-bottom",
+      "proxy and navigation"
+    ],
+    "deferred": [
+      "Recharts integration",
+      "Tiptap editor",
+      "full demo template and mock services"
+    ],
+    "dependenciesChanged": false,
+    "status": "Historical P0/P1 checkpoint; superseded for current visual/component adoption by basilos_v2_full_adoption."
+  },
+  "basilos_v2_full_adoption": {
+    "date": "2026-10-28",
+    "sourceRelease": "0.4.0-agent-materials.1",
+    "rulesRelease": "local-core-a9e447f2844c007f12ea",
+    "sourceEvidence": "docs/basilos-v2-full-source-verification-2026-10-28.json",
+    "adaptedBaseline": "docs/basilos-v2-full-adapted-baseline-2026-10-28.json",
+    "components": [
+      {
+        "resourceId": "ui/button",
+        "source": "context/components/src/ui/button.tsx",
+        "sourceSHA256": "40d3437ab1b7b596dfc168aca7ebc89d4933b8845cb6366bc2ec7c5892508906",
+        "target": "packages/harness-ui/src/ui/button.tsx",
+        "adoptedSHA256": "40d3437ab1b7b596dfc168aca7ebc89d4933b8845cb6366bc2ec7c5892508906"
+      },
+      {
+        "resourceId": "ui/sidebar",
+        "source": "context/components/src/ui/sidebar.tsx",
+        "sourceSHA256": "1fe9135cf7922ed96d66f9601a35423662be975300ed0c831b7e2383447aaf0e",
+        "target": "packages/harness-ui/src/ui/sidebar.tsx",
+        "adoptedSHA256": "1fe9135cf7922ed96d66f9601a35423662be975300ed0c831b7e2383447aaf0e"
+      },
+      {
+        "resourceId": "ui/select",
+        "source": "context/components/src/ui/select.tsx",
+        "sourceSHA256": "2e371c2eb00bbb23a98aa86d88f7fab297aca0e6aab3e939b85372b091f076cb",
+        "target": "packages/harness-ui/src/ui/select.tsx",
+        "adoptedSHA256": "2e371c2eb00bbb23a98aa86d88f7fab297aca0e6aab3e939b85372b091f076cb"
+      },
+      {
+        "resourceId": "ui/badge",
+        "source": "context/components/src/ui/badge.tsx",
+        "sourceSHA256": "955bf4340c86bad92a3eb013f7b80a4aba91f41d8511b8321a7891e9f22400ed",
+        "target": "packages/harness-ui/src/ui/badge.tsx",
+        "adoptedSHA256": "955bf4340c86bad92a3eb013f7b80a4aba91f41d8511b8321a7891e9f22400ed"
+      },
+      {
+        "resourceId": "ui/sheet",
+        "source": "context/components/src/ui/sheet.tsx",
+        "sourceSHA256": "d3767f21ab9770ce1bd37854b519f987cfa50daf33c8642048965052f6e31a20",
+        "target": "packages/harness-ui/src/ui/sheet.tsx",
+        "adoptedSHA256": "d3767f21ab9770ce1bd37854b519f987cfa50daf33c8642048965052f6e31a20"
+      },
+      {
+        "resourceId": "ui/radio-group",
+        "source": "context/components/src/ui/radio-group.tsx",
+        "sourceSHA256": "e1850ac5898f04f2d38d742dca74b925f794a2258a9fbd9a1f6bcc666947d46c",
+        "target": "packages/harness-ui/src/ui/radio-group.tsx",
+        "adoptedSHA256": "e1850ac5898f04f2d38d742dca74b925f794a2258a9fbd9a1f6bcc666947d46c"
+      },
+      {
+        "resourceId": "ui/scroll-area",
+        "source": "context/components/src/ui/scroll-area.tsx",
+        "sourceSHA256": "c1633e270d23e6494dae4430c578dace116d2439d400d2b0cc3778b2b7089cb0",
+        "target": "packages/harness-ui/src/ui/scroll-area.tsx",
+        "adoptedSHA256": "c1633e270d23e6494dae4430c578dace116d2439d400d2b0cc3778b2b7089cb0"
+      },
+      {
+        "resourceId": "ui/popover",
+        "source": "context/components/src/ui/popover.tsx",
+        "sourceSHA256": "d7e71c6eef8b30a209128746acb0acaea4f1c120033f13848e2cfbf136295251",
+        "target": "packages/harness-ui/src/ui/popover.tsx",
+        "adoptedSHA256": "d7e71c6eef8b30a209128746acb0acaea4f1c120033f13848e2cfbf136295251"
+      },
+      {
+        "resourceId": "ui/chart",
+        "source": "context/components/src/ui/chart.tsx",
+        "sourceSHA256": "3843437045e897802e20c800e355dccf39e62e3f98918c0381915b1bb65e00fd",
+        "target": "packages/harness-ui/src/ui/chart.tsx",
+        "adoptedSHA256": "a7064ddefb68368825df109875d7bf0502b5e0196165813965fbc7ff04e02237"
+      },
+      {
+        "resourceId": "context/components/src/hooks/use-mobile.ts",
+        "source": "context/components/src/hooks/use-mobile.ts",
+        "sourceSHA256": "58b2cc5fa259358e9192125abf072c832144193d87f3d66a90b13089a0196cef",
+        "target": "packages/harness-ui/src/hooks/use-mobile.ts",
+        "adoptedSHA256": "58b2cc5fa259358e9192125abf072c832144193d87f3d66a90b13089a0196cef"
+      }
+    ],
+    "adaptations": [
+      "The official Button asChild API preserves host direct-child DOM and refs via a small host adapter.",
+      "ChartContainer uses static CSS series variables to preserve strict style-src self CSP; ChartStyle does not inject a style element.",
+      "SidebarProvider uses existing host navigation state and keyboard behavior; the mobile navigation uses the official Sheet.",
+      "V2 Appearance and theme choices are composed with official Card / RadioGroup. Host settings preserve existing theme storage and add Basilos accent/density storage."
+    ],
+    "dependencies": {
+      "react": "19.2.8",
+      "reactDom": "19.2.8",
+      "radixUi": "1.6.7",
+      "tailwindcss": "4.3.3",
+      "recharts": "3.10.1",
+      "nanoid": "3.3.20"
+    },
+    "hostOwned": [
+      "Real resource envelope, timestamps, zeros, missing values and sampling gaps.",
+      "Existing chat/session API, controlled drafts, permissions, streaming, IME and scroll engine.",
+      "Existing dev proxy and navigation service URLs."
+    ],
+    "notAdopted": [
+      "Tiptap rich editor, mention entity registry and demo persistence: current host uses its controlled PromptInput.",
+      "Template mock metrics, simulated trend/comparison values and demo backend."
+    ],
+    "pinsChanged": false,
+    "followups": [
+      {
+        "date": "2026-10-29",
+        "subject": "resource chart adaptive Y axis",
+        "baseline": "docs/basilos-v2-resource-axis-baseline-2026-10-29.json",
+        "note": "docs/2026-10-29-资源监控趋势纵轴自适应.md",
+        "upstreamComponentsChanged": false,
+        "dependenciesChanged": false
+      },
+      {
+        "date": "2026-10-29",
+        "subject": "Stable resource polling presentation, refresh RadioGroup and sidebar footer",
+        "baseline": "docs/basilos-v2-resource-polish-baseline-2026-10-29.json",
+        "note": "docs/2026-10-29-资源监控刷新稳定性与侧栏布局优化.md",
+        "upstreamComponentsChanged": false,
+        "dependenciesChanged": false
+      },
+      {
+        "date": "2026-10-29",
+        "subject": "Resource action hierarchy and accelerator/system metric groups",
+        "baseline": "docs/basilos-v2-resource-devices-baseline-2026-10-29.json",
+        "note": "docs/2026-10-29-资源监控操作区与硬件指标分组优化.md",
+        "upstreamComponentsChanged": false,
+        "dependenciesChanged": false
+      },
+      {
+        "date": "2026-10-29",
+        "subject": "Save snapshot plus ellipsis actions menu",
+        "baseline": "docs/basilos-v2-resource-menu-baseline-2026-10-29.json",
+        "note": "docs/2026-10-29-资源监控顶部三点操作菜单.md",
+        "componentAdaptation": "Optional DropdownMenuContent portalContainer; existing default unchanged",
+        "dependenciesChanged": false
+      },
+      {
+        "date": "2026-10-29",
+        "subject": "Resource process summary cards and responsive process table",
+        "baseline": "docs/basilos-v2-process-panel-baseline-2026-10-29.json",
+        "note": "docs/2026-10-29-当前模型进程面板优化.md",
+        "upstreamComponentsChanged": false,
+        "dependenciesChanged": false
+      },
+      {
+        "date": "2026-10-29",
+        "subject": "Unified actions menu after refresh interval selector",
+        "baseline": "docs/basilos-v2-toolbar-menu-baseline-2026-10-29.json",
+        "note": "docs/2026-10-29-资源监控工具栏统一操作菜单.md",
+        "upstreamComponentsChanged": false,
+        "dependenciesChanged": false
+      },
+      {
+        "date": "2026-10-29",
+        "subject": "Moderate overview card density and recent actual micro trends",
+        "baseline": "docs/basilos-v2-overview-density-baseline-2026-10-29.json",
+        "note": "docs/2026-10-29-资源概览卡片适中密度与小趋势优化.md",
+        "upstreamComponentsChanged": false,
+        "dependenciesChanged": false
+      },
+      {
+        "date": "2026-10-29",
+        "subject": "Remove draft grouping and reuse unsent chat workspaces",
+        "baseline": "docs/basilos-v2-chat-history-baseline-2026-10-29.json",
+        "note": "docs/2026-10-29-智能对话移除草稿分组与空白占位.md",
+        "upstreamComponentsChanged": false,
+        "dependenciesChanged": false
+      },
+      {
+        "date": "2026-10-29",
+        "subject": "Refine chat sidebar header and single search focus indicator",
+        "baseline": "docs/basilos-v2-chat-sidebar-top-baseline-2026-10-29.json",
+        "note": "docs/2026-10-29-智能对话侧栏顶部与搜索框优化.md",
+        "upstreamComponentsChanged": false,
+        "dependenciesChanged": false
+      },
+      {
+        "date": "2026-10-29",
+        "subject": "Focus live resource charts on the latest continuous segment after sampling gaps",
+        "baseline": "docs/basilos-v2-resource-history-gap-baseline-2026-10-29.json",
+        "note": "docs/2026-10-29-资源趋势断采窗口与时间轴修复.md",
+        "upstreamComponentsChanged": false,
+        "dependenciesChanged": false
+      }
+    ]
+  },
+  "host_csp_modal_adaptation": {
+    "date": "2026-10-30",
+    "reason": "Preserve strict style-src self without inline runtime style tags when opening host dialogs and mobile sheets.",
+    "upstreamScope": "Host adaptation of adopted Harness Dialog and Sheet; original attribution remains unchanged.",
+    "note": "docs/csp-modal-compatibility.md",
+    "dependency": "react-remove-scroll@2.7.2 (already installed transitively; now explicit)",
+    "files": [
+      {
+        "path": "packages/harness-ui/src/lib/csp-modal.tsx",
+        "sha256": "da9c4e8da9a90c7b64137204d70cf5b0b61846d583a664f9c30eab22f88de5e0"
+      },
+      {
+        "path": "packages/harness-ui/src/ui/dialog.tsx",
+        "sha256": "cc4d3fb60fd34b294495c77313d5e0ca0c972b22c5cdd139d13a05671cb15147"
+      },
+      {
+        "path": "packages/harness-ui/src/ui/sheet.tsx",
+        "sha256": "c0f467b650957d6edf0c244b135f20a67132660c0c857d62edeffd14cd89706a"
+      }
+    ]
+  }
+}

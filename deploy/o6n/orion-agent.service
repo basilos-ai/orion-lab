@@ -1,0 +1,21 @@
+[Unit]
+Description=Orion Lab Pi Agent (loopback only)
+After=network-online.target o6n-smart-chat.service
+
+[Service]
+Type=simple
+WorkingDirectory=%h/orion-agent/current
+Environment=ORION_AGENT_STATE=%h/.local/state/orion-agent
+Environment=NODE_ENV=production
+ExecStart=%h/.local/opt/orion/node-v24.19.0-linux-arm64/bin/node %h/orion-agent/current/server.mjs
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+UMask=0077
+MemoryMax=1G
+TasksMax=128
+KillMode=control-group
+TimeoutStopSec=10
+
+[Install]
+WantedBy=default.target

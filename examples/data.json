@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 4,
+  "updatedAt": "2026-10-19T00:00:00+08:00",
+  "source": {
+    "name": "Empty example dataset",
+    "sha256": "example-no-measurements",
+    "url": "assets/README.txt"
+  },
+  "device": {},
+  "tests": [],
+  "records": [],
+  "pairs": [],
+  "protocol": [
+    {
+      "topic": "演示数据",
+      "value": "此仓库不包含设备实测数据或真实会话。",
+      "note": "部署时通过O6N_DATA_DIR注入经过筛选的数据目录。",
+      "scope": "开源预览",
+      "date": "2026-10-19"
+    }
+  ],
+  "decisionTests": [],
+  "routingTests": [],
+  "controlledTests": [],
+  "counts": {
+    "models": 0,
+    "measuredBatches": 0,
+    "records": 0,
+    "pairs": 0
+  },
+  "caseNames": {}
+}
